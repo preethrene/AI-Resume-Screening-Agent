@@ -48,7 +48,7 @@ Fully local and deployable on Streamlit Cloud.
 
 | Home | Upload | Results |
 |------|--------|---------|
-| ![Home](screenshots/home.png) | ![Upload](screenshots/upload.png) | ![Results](screenshots/results.png) |
+| ![Home](screenshots/Home.png) | ![Upload](screenshots/Upload.png) | ![Results](screenshots/Results.png) |
 
 
 ---
