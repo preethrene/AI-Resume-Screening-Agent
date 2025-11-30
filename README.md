@@ -1,7 +1,5 @@
 # 🤖 AI Resume Screening Agent
 
-### Paste JD → Upload PDF Resumes → Rank Candidates (TF-IDF Based, 100% Local, No OpenAI)
-
 <p align="left">
   <img src="https://img.shields.io/badge/Author-Preetham%20N-blue" />
   <img src="https://img.shields.io/badge/Python-3.10-yellow" />
