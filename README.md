@@ -43,43 +43,41 @@ https://ai-resume-screening-agent-skills-ats99.streamlit.app/
 ---
 
 ## 🏗 Architecture Diagram (Mermaid)
-
 ```mermaid
 flowchart TD
 
-    A[User Inputs<br/>• Job Description<br/>• Resume PDFs] --> B
+    A[User Inputs<br/>Job Description<br/>Resume PDFs] --> B
 
-    B[PDF Extractor<br/>(pypdfium2)] --> C[Extracted Resume Text]
+    B[PDF Extractor pypdfium2] --> C[Extracted Resume Text]
 
-    C --> D[Preprocessing<br/>Lowercase, Cleanup, Tokenize]
+    C --> D[Preprocessing<br/>Lowercase Cleanup Tokenize]
 
-    D --> E[Skill Extraction<br/>Multi-word + Regex Detection]
+    D --> E[Skill Extraction<br/>Multiword and Regex Detection]
 
-    A --> F[TF-IDF Vectorizer<br/>1–2 n-grams]
+    A --> F[TFIDF Vectorizer<br/>Unigram and Bigram]
     D --> F
 
     F --> G[Cosine Similarity Score]
 
-    E --> H[Skill Matching Engine<br/>Matched vs Missing]
+    E --> H[Skill Matching Engine<br/>Matched and Missing Skills]
 
     G --> I[Relevance Score]
-    H --> J[Skill Coverage %]
+    H --> J[Skill Coverage Percent]
 
     I --> K[ATS Score Generator]
     J --> K
 
     K --> L[Ranked Candidate Table]
 
-    L --> M[Detailed Candidate View<br/>Matched & Missing Skills]
-    L --> N[Visual Charts<br/>Plotly Bar, Pie, Gauge]
+    L --> M[Detailed Candidate View<br/>Matched and Missing Skills]
+    L --> N[Visual Charts<br/>Plotly Bar Pie Gauge]
 
-    L --> O[(Streamlit UI)]
+    L --> O[Streamlit UI]
     M --> O
     N --> O
 
-    O --> P[GitHub → Streamlit Cloud Deployment]
+    O --> P[Github to Streamlit Cloud Deployment]
 ```
-
 
 ---
 
