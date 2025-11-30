@@ -1,6 +1,8 @@
 streamlit==1.32.0
 pandas>=2.2.2
-numpy
-scikit-learn
-PyPDF2
 plotly
+pdfplumber
+python-docx
+numpy
+nltk
+scikit-learn
