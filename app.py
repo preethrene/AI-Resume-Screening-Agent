@@ -346,3 +346,4 @@ if st.session_state.results is not None:
         title=f"Skill Distribution for {selected_person}"
     )
     st.plotly_chart(fig_pie, use_container_width=True)
+
