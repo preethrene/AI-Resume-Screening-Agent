@@ -47,35 +47,39 @@ https://ai-resume-screening-agent-skills-ats99.streamlit.app/
 ```mermaid
 flowchart TD
 
-A[User Inputs\n- Job Description\n- Resume PDFs] --> B
-B[PDF Extractor\n(pypdfium2)] --> C[Extracted Resume Text]
+    A[User Inputs<br/>• Job Description<br/>• Resume PDFs] --> B
 
-C --> D[Preprocessing\nLowercase, cleanup, tokenize]
+    B[PDF Extractor<br/>(pypdfium2)] --> C[Extracted Resume Text]
 
-D --> E[Skill Extraction\nMulti-word & regex detection]
+    C --> D[Preprocessing<br/>Lowercase, Cleanup, Tokenize]
 
-A --> F[TF-IDF Vectorizer\n1–2 n-grams]
-D --> F
-F --> G[Cosine Similarity Score]
+    D --> E[Skill Extraction<br/>Multi-word + Regex Detection]
 
-E --> H[Skill Matching Engine\nMatched vs Missing]
-G --> I[Relevance Score]
-H --> J[Skill Coverage %]
+    A --> F[TF-IDF Vectorizer<br/>1–2 n-grams]
+    D --> F
 
-I --> K[ATS Score Generator]
-J --> K
+    F --> G[Cosine Similarity Score]
 
-K --> L[Ranked Candidate Table]
-L --> M[Detailed Candidate View\nMatched & Missing Skills]
-L --> N[Charts\nPlotly Visual Charts]
+    E --> H[Skill Matching Engine<br/>Matched vs Missing]
 
-L --> O[(Streamlit UI)]
-M --> O
-N --> O
+    G --> I[Relevance Score]
+    H --> J[Skill Coverage %]
 
-O --> P[GitHub → Streamlit Cloud Deployment]
+    I --> K[ATS Score Generator]
+    J --> K
 
+    K --> L[Ranked Candidate Table]
+
+    L --> M[Detailed Candidate View<br/>Matched & Missing Skills]
+    L --> N[Visual Charts<br/>Plotly Bar, Pie, Gauge]
+
+    L --> O[(Streamlit UI)]
+    M --> O
+    N --> O
+
+    O --> P[GitHub → Streamlit Cloud Deployment]
 ```
+
 
 ---
 
